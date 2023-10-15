@@ -6,6 +6,19 @@
     그리고 body는 실제로 웹페이지를 접속했을때 보이는 화면이라고 생각하면 됨. head는 실제 웹사이트에서 상단 탭에 있는 이름 말고는 보여지는게 없음. -->
     <head>
         <title>Home - My first website.</title>
+        <!-- html - css를 연결시키는데는 두가지 방법이 있음.
+        1. link tag를 이용해서 css파일을 불러오는것.
+        2. html 파일안에서 style tag를 이용해 직접 작성하는 방법.
+        당연히 전자가 더 좋음. 왜와이? 유지보수성도 좋고 여러 파일에서 긁어올수도 있기 때문. -->
+        <link href="styles.css" rel="stylesheet" \ />
+        <!-- 첫번째 방법 -->
+        <style>
+            h1 {
+                color: blue;
+                font-size: 100px;
+            }
+        </style>
+        <!-- 두번째 방법 -->
         <meta charset="utf-8" />
         <meta name="description" content="This is my website" />
     </head>
