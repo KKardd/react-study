@@ -10,15 +10,18 @@
         1. link tag를 이용해서 css파일을 불러오는것.
         2. html 파일안에서 style tag를 이용해 직접 작성하는 방법.
         당연히 전자가 더 좋음. 왜와이? 유지보수성도 좋고 여러 파일에서 긁어올수도 있기 때문. -->
-        <link href="styles.css" rel="stylesheet" \ />
         <!-- 첫번째 방법 -->
+        <link href="styles.css" rel="stylesheet" \ />
+        <!-- 두번째 방법 -->
         <style>
             h1 {
                 color: blue;
                 font-size: 100px;
             }
         </style>
-        <!-- 두번째 방법 -->
+
+        <!-- CSS는 Cascading Style Sheet의 약어임. Cascade는 폭포라는 의미라고 함. 폭포는 위에서 아래로 떨어지는데, 
+        css도 이처럼 위에서부터 아래로 차례대로 읽는다고 함. 그래서 똑같은 태그의 똑같은 스타일을 다르게 설정해둔다면, 아래 써져있는 스타일로 들어감. -->
         <meta charset="utf-8" />
         <meta name="description" content="This is my website" />
     </head>
@@ -79,5 +82,9 @@
         <footer>&copy; 2023</footer>
         <!-- 이렇게 의미 있는 박스들을 만들어주는게 Semantic이라고 함. div박스로 다 만드는 것이 아닌, 
         이렇게 의미있는 태그값들을 활용해서 표현하면 가독성이 증가함. -->
+
+        <!-- Block과 Inline의 차이점.
+        - Block: 얘는 옆(오른쪽?)에 아무것도 올 수 없음. 대표적으로 div와 같은 놈들 
+        - Inline: In the same line의 줄임말이라고 함. 충격. span, a(link), image같은 것인데 얘네는 줄바꿈되지않고 오른쪽으로 붙어서 출력됨 -->
     </body>
 </html>
