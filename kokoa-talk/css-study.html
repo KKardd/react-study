@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home - My first website.</title>
+        <!-- html - css를 연결시키는데는 두가지 방법이 있음.
+        1. link tag를 이용해서 css파일을 불러오는것.
+        2. html 파일안에서 style tag를 이용해 직접 작성하는 방법.
+        당연히 전자가 더 좋음. 왜와이? 유지보수성도 좋고 여러 파일에서 긁어올수도 있기 때문. -->
+        <!-- 첫번째 방법 -->
+        <link href="styles.css" rel="stylesheet" \ />
+        <!-- 두번째 방법 -->
+        <style>
+            html {
+                background-color: black;
+            }
+            body {
+                background-color: blue;
+                margin: 0px;
+            }
+            div {
+                background-color: red;
+                height: 150px;
+                width: 150px;
+                margin: 10px;
+            }
+        </style>
+        <!-- CSS는 Cascading Style Sheet의 약어임. Cascade는 폭포라는 의미라고 함. 폭포는 위에서 아래로 떨어지는데, 
+        css도 이처럼 위에서부터 아래로 차례대로 읽는다고 함. 그래서 똑같은 태그의 똑같은 스타일을 다르게 설정해둔다면, 아래 써져있는 스타일로 들어감. -->
+        <meta charset="utf-8" />
+        <meta name="description" content="This is my website" />
+    </head>
+    <body>
+        <div></div>
+
+        <!-- Block과 Inline의 차이점.
+        - Block: 얘는 옆(오른쪽?)에 아무것도 올 수 없음. 대표적으로 div와 같은 놈들 
+        - Inline: In the same line의 줄임말이라고 함. 충격. span, a(link), image같은 것인데 얘네는 줄바꿈되지않고 오른쪽으로 붙어서 출력됨 -->
+
+        <!-- Box에는 3가지가 있음. margin, border, padding
+        1. margin은 box의 border(경계)의 바깥에 있는 공간
+        현재 html에 배경색이 검정, 그 안 body부분의 배경이 파랑, 그 안 div부분의 배경이 빨강이라고 가정하자.
+        그리고 margin은 다음과 같다.
+        html {
+                background-color: black;
+            }
+        body {
+                background-color: blue;
+                margin: 0px;
+            }
+        div {
+                background-color: red;
+                height: 150px;
+                width: 150px;
+                margin: 10px;
+            }
+        이렇게 작성되었다고 가정하자.
+        그렇다면 전체적으로 검정색으로 도배된다. 그 다음 body의 margin이 0이기 때문에 html과 body
+        즉, box와 그 바깥쪽의 경계값이 0으로 설정되어 왼쪽상단에 쫙 달라붙어야한다.
+        하지만, div박스의 margin값이 10을 존재하기 때문에, 상단부분에서 10px떨어져서 그 부분은 검정이 남고,
+        이는 div의 margin값이 body를 넘어서기 때문이다. 이 현상을 Collapsing margins라고 한다고 한다.
+        파란색 배경의 body부분에서 margin값 10을 받아 파란색 10px다음에 150 * 150의 빨간 div박스가 생성되는 것을 확인할 수 있다.
+        
+        만약 margin의 값을 두개만 주었다면 위아래 적용으로 하나, 양옆 적용으로 하나의 값을 받아가고,
+        margin값을 네개를 준다면 top - right - bottom - left순으로 시계방향 margin이 적용된다.
+
+
+    --></body>
+</html>
