@@ -15,13 +15,23 @@
             }
             body {
                 background-color: blue;
-                margin: 0px;
+                padding: 10px;
             }
             div {
                 background-color: red;
                 height: 150px;
                 width: 150px;
-                margin: 10px;
+            }
+            /* 아래와 같이 #과 함께 사용하여 id값에 대한 css value를 부여할 수 있다.
+            아래와 같이 div에 id값으로 first, second를 넣으면, div에 해당하는 css속성과 id로 해당된 css속성이 함께 적용된다. */
+            #first {
+                padding: 75px;
+            }
+            #second {
+                background-color: aqua;
+                /* 이렇게 지정해둔다면, first div박스는 div의 속성을 받아 빨간색의 박스가 생성된다. 빨간색 박스의 크기는 300 * 300인데,
+                이는 padding값이 상하좌우로 75px이 적용되었기 때문이다.
+                실제로 second박스만 150의 height와 width를 가지고 있다.*/
             }
         </style>
         <!-- CSS는 Cascading Style Sheet의 약어임. Cascade는 폭포라는 의미라고 함. 폭포는 위에서 아래로 떨어지는데, 
@@ -30,7 +40,9 @@
         <meta name="description" content="This is my website" />
     </head>
     <body>
-        <div></div>
+        <div id="first">
+            <div id="second"></div>
+        </div>
 
         <!-- Block과 Inline의 차이점.
         - Block: 얘는 옆(오른쪽?)에 아무것도 올 수 없음. 대표적으로 div와 같은 놈들 
@@ -62,7 +74,23 @@
         
         만약 margin의 값을 두개만 주었다면 위아래 적용으로 하나, 양옆 적용으로 하나의 값을 받아가고,
         margin값을 네개를 준다면 top - right - bottom - left순으로 시계방향 margin이 적용된다.
-
-
+---------------------------------------------------------------------------------------------------------------------
+        2. padding은 box의 border(경계)의 안쪽에 있는 공간            
+        padding은 margin의 반대방향으로 생기는 것이다.
+        html {
+                background-color: black;
+            }
+        body {
+                background-color: blue;
+                padding: 10px;
+            }
+        div {
+                background-color: red;
+                height: 150px;
+                width: 150px;
+            }
+        위의 css를 이렇게 고친다면, 검정색 배경으로 margin의 기본값(8px)이 생긴다. 그리고 body에 해당하는 부분에
+        파란색 기다란 박스가 생기고, 거기서 padding값을 10으로 주면서 파란색 박스 안쪽에 10px의 파란색으로 둘러싸인 
+        빨간 div박스가 생성된것을 확인할 수 있다.
     --></body>
 </html>
