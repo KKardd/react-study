@@ -22,6 +22,11 @@
                 height: 150px;
                 width: 150px;
             }
+            #tomato,
+            #tomato2,
+            #tomato3 {
+                background-color: tomato;
+            }
             /* 아래와 같이 #과 함께 사용하여 id값에 대한 css value를 부여할 수 있다.
             아래와 같이 div에 id값으로 first, second를 넣으면, div에 해당하는 css속성과 id로 해당된 css속성이 함께 적용된다. */
             #first {
@@ -40,9 +45,12 @@
         <meta name="description" content="This is my website" />
     </head>
     <body>
-        <div id="first">
-            <div id="second"></div>
-        </div>
+        <span>hello</span>
+        <span id="tomato">hello</span>
+        <span>hello</span>
+        <span id="tomato2">hello</span>
+        <span>hello</span>
+        <span id="tomato3">hello</span>
 
         <!-- Block과 Inline의 차이점.
         - Block: 얘는 옆(오른쪽?)에 아무것도 올 수 없음. 대표적으로 div와 같은 놈들 
@@ -100,5 +108,35 @@
             border: 2px solid black
         }
         라고 지정해주면 된다. 이렇게 지정해준다면 모든 경계선에서 2px짜리 굵은 검정 선이 그어진 것을 확인할 수 있다.
+-------------------------------------------------------------------------------------------------------
+        Inline에서 padding값은 부여할 수 있지만, margin값은 너비(좌/우)에만 포함된다.
+        만약 hello!라고 적힌 span을 6개 만든다고 가정하자. span은 Inline태그이므로 옆으로 쭉 나열될 것이다.
+        근데 만약, 2, 4, 6번째 span에는 구분하기위해 background-color를 지정
+        css를 id값을 이용해서 지정한다고 가정하자.
+        <span>hello</span>
+        <span id="tomato">hello</span>
+        <span>hello</span>
+        <span id="tomato2">hello</span>
+        <span>hello</span>
+        <span id="tomato3">hello</span>
+        아래와 같은 코드에서 id값은 중복될 수 없으니, 뒤에 숫자를 붙여 간단히 표기했고, css부분은
+        #tomato,
+        #tomato2,
+        #tomato3 {
+            background-color: tomato;
+        }
+        이렇게 쉼표로 구분지어 함께 속성부여할 수 있다. 근데 이것마저도 비효율적이다. id값을 1, 2,3으로 주는게 매우 비효율적이기에
+        class를 써서 아래와 같이 표현할 수 있다. 결과값은 위와 같다.
+        <span>hello</span>
+        <span class="tomato">hello</span>
+        <span>hello</span>
+        <span class="tomato">hello</span>
+        <span>hello</span>
+        <span class="tomato">hello</span>
+        아래와 같은 코드에서 id값은 중복될 수 없으니, 뒤에 숫자를 붙여 간단히 표기했고, css부분은
+        .tomato {
+            background-color: tomato;
+        }
+        class를 표현하고 싶을땐, #이 아닌 .을 앞에 붙여주어 표현한다.
     --></body>
 </html>
